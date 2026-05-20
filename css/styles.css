@@ -10901,6 +10901,7 @@ p.lead {
   #sideNav .navbar-brand .initials-profile {
     width: 10rem;
     height: 10rem;
+    object-fit: cover;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
     background-color: #bd5d38;
     color: white;
