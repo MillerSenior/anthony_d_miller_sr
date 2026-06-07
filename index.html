@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Anthony Miller's Professional Resume - Software Engineer" />
         <meta name="author" content="Anthony Miller" />
-        <title>Anthony Miller - Software Engineer Resume</title>
+        <title>Anthony Miller - Senior Software Engineer</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -16,6 +16,32 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Navy + Cyan theme override -->
+        <style>
+            :root {
+                --bs-primary: #0ea5e9;
+                --bs-primary-rgb: 14, 165, 233;
+                --bs-link-color: #0ea5e9;
+                --bs-link-hover-color: #0284c7;
+            }
+            #sideNav {
+                background-color: #0f172a !important;
+            }
+            #sideNav .navbar-brand .initials-profile {
+                border-color: #0ea5e9 !important;
+                background-color: #0f172a !important;
+            }
+            #sideNav .navbar-brand .initials-profile:hover {
+                box-shadow: 0 0 15px rgba(14, 165, 233, 0.5) !important;
+            }
+            .resume-section .fa-certificate,
+            .resume-section .fa-graduation-cap,
+            .resume-section .fa-code,
+            .resume-section .fa-cloud,
+            .resume-section .fa-award {
+                color: #0ea5e9 !important;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -44,11 +70,12 @@
                         Anthony
                         <span class="text-primary">Miller</span>
                     </h1>
+                    <div class="subheading mb-1">Senior Full-Stack Software Engineer</div>
                     <div class="subheading mb-5">
                         St. Louis, MO ·
-                        <a href="mailto:anthony.millersr82@gmail.com">anthony.millersr82@gmail.com</a>
+                        <a href="mailto:anthony@darrotech.com">anthony@darrotech.com</a>
                     </div>
-                    <p class="lead mb-5">Software Engineer specializing in Web & Data Solutions Development</p>
+                    <p class="lead mb-5">Senior full-stack software engineer and founder of Darro Tech LLC. Designs, builds, and operates production systems spanning enterprise analytics platforms, multi-tenant SaaS, AI-integrated applications, and security-hardened APIs. Ships independently. Makes architecture decisions without committee. Based in St. Louis.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/anthony-miller-sr-a38bb02b9/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" style="color: #0A66C2;"></i></a>
                         <a class="social-icon" href="https://github.com/MillerSenior" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" style="color: #181717;"></i></a>
@@ -62,29 +89,34 @@
                     <h2 class="mb-5">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Renewables Systems Specialist</h3>
+                            <h3 class="mb-0">Senior Software Engineer</h3>
                             <div class="subheading mb-3">Roeslein & Associates</div>
-                            <p>• Serve as a Senior Software Engineer for a KPI-driven web platform that translates complex production and operations data into actionable insights for business and engineering stakeholders.</p>
-                            <p>• Architect and develop a full-stack KPI web application using Next.js, PostgreSQL/SQL, and AI-powered services for production and operational analytics.</p>
-                            <p>• Design scalable data models and dashboards to support RNG monitoring, compliance, and performance tracking.</p>
-                            <p>• Integrate AI capabilities to enhance insights, trend detection, and decision support for operations teams.</p>
-                            <p>• Collaborate cross-functionally to align digital solutions with business strategy and innovation goals.</p>
-                            <p>• Support continuous improvement initiatives through agile development and data-driven engineering.</p>
+                            <p>• Own and operate multiple production web platforms end-to-end — architecture decisions, feature development, deployment, security hardening, and performance optimization — without a dedicated ops team or senior oversight.</p>
+                            <p>• Implemented production-ready WebAuthn/FIDO2 biometric authentication supporting device passkeys, Windows Hello, Face ID, and fingerprint login — including challenge storage, replay protection, and session token bridge between FIDO2 and JWT auth.</p>
+                            <p>• Reduced per-request database query count from 40+ to under 10 through bulk aggregation and cache strategy; optimized Docker build pipeline reducing deployment time from 20+ minutes to under 5.</p>
+                            <p>• Designed and implemented end-to-end test coverage (230+ Jest unit tests, Playwright E2E) with TDD methodology across a production multi-tenant application.</p>
+                            <p>• Provisioned and operated production infrastructure end-to-end: Docker containerization, cloud deployment (Render, AWS RDS, Windows EC2 with PowerShell automation), environment management, and automated multi-section PDF reporting via headless Chromium.</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">November 2025 - Present</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
+                            <h3 class="mb-0">Founder &amp; Principal Engineer</h3>
+                            <div class="subheading mb-3">Darro Tech LLC</div>
+                            <p>• Founded and operate a software consultancy delivering custom web applications, data platforms, and ongoing technical support to businesses and organizations.</p>
+                            <p>• Designed and built a proprietary multi-tenant SaaS platform with client portals, subscription billing management, JWT authentication, email automation, and scheduled statement generation — deployed and live at darrotech.com.</p>
+                            <p>• Delivered full-stack web applications for clients including an event rental company, a pet owner social platform with WebRTC video and Stripe subscriptions, and a civic tech coordination dashboard with AI-assisted article summarization.</p>
+                            <p>• Manage ongoing monthly managed services relationships with active clients; sole engineer responsible for architecture, deployment, security, and support.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
                             <h3 class="mb-0">Software Engineer</h3>
                             <div class="subheading mb-3">Unlocked Labs</div>
-                            <p>• Worked with a team of developers to build an education content platform for incarcerated individuals, expanding access to learning opportunities.</p>
-
-<p>• Pair programmed to design and implement a dashboard interface for an alternative energy solutions company, improving usability and data insights.</p>
-
-<p>• Contributed to a team effort to establish a Learning Center in the St. Louis Justice Center as part of the STLOVP plan collaboration.</p>
-
-
-                    
+                            <p>• Built features for a full-stack education content platform serving incarcerated individuals — contributed to UI implementation and application logic expanding access to structured learning resources.</p>
+                            <p>• Designed and implemented a data dashboard interface for an alternative energy solutions company — responsible for visualization layout, component development, and usability improvements for operations data.</p>
+                            <p>• Delivered software development work that supported the establishment of a physical Learning Center at the St. Louis Justice Center as part of the STLOVP collaboration — a concrete civic outcome from application work.</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">January 2024 - November 2025</span></div>
                     </div>
@@ -140,24 +172,37 @@
                         <li class="list-inline-item"><i class="fab fa-react" style="color: #61DAFB;"></i></li>
                         <li class="list-inline-item"><i class="devicon-mysql-plain-wordmark" style="color: #4479A1;"></i></li>
                         <li class="list-inline-item"><i class="devicon-postgresql-plain-wordmark" style="color: #336791;"></i></li>
+                        <li class="list-inline-item"><i class="devicon-go-original-wordmark" style="color: #00ADD8;"></i></li>
                     </ul>
                     <div class="subheading mb-3">Technical Expertise</div>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Web Development: Flask, Node.js, Jinja, Angular, Spring Boot
+                            Web Development: Spring Boot, Next.js, React, Flask, Node.js, Angular
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Data Analysis & Visualization: Pandas, NumPy, Matplotlib
+                            Databases: PostgreSQL, MySQL, SQLite, Prisma ORM, pgvector, MongoDB
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Databases: SQL, PostgreSQL, MySQL, MongoDB
+                            Security: WebAuthn/FIDO2, JWT/RBAC, Argon2id, CSRF protection, brute-force &amp; rate limiting, attack-vector test suites
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Tools: VS Code, IntelliJ, Jupyter Notebook, Git, Docker
+                            AI &amp; Data: ARIMA forecasting, Z-score anomaly detection, RAG (vector embeddings, semantic chunking), PDF document intelligence, Pandas, NumPy
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Infrastructure &amp; DevOps: Docker, Render, AWS RDS, AWS EC2, Firebase; self-hosting, VPN mesh, DNS filtering, UFW firewall, uptime monitoring
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Testing: Jest, Playwright, Vitest, pytest, Go test, k6, TDD
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Tools: VS Code, IntelliJ, Git, Docker, Jupyter Notebook
                         </li>
                     </ul>
                 </div>
@@ -198,33 +243,15 @@
                     <ul class="fa-ul mb-4">
                         <li>
                             <span class="fa-li"><i class="fas fa-graduation-cap text-warning"></i></span>
-                            <strong>IBM AI Development Specialization (2025)</strong>
-                            <ul class="fa-ul ml-4 mb-2">
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/professional-cert/PCSWXUBXQ2EC?authType=google&completeMode=existingCourseraAccount" target="_blank" rel="noopener noreferrer">IBM AI Developer</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/SGU2PVXB5MHZ" target="_blank" rel="noopener noreferrer">Building Generative AI-Powered Applications with Python</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/SGU2PVXB5MHZ" target="_blank" rel="noopener noreferrer">Developing AI Applications with Python and Flask</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/ELHIMZJDFZUH" target="_blank" rel="noopener noreferrer">Python For Data Science AI Development</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/E3RIPLJNI2ZP" target="_blank" rel="noopener noreferrer">Introduction to Artificial Intelligence</a></li>
-                            </ul>
+                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/PCSWXUBXQ2EC" target="_blank" rel="noopener noreferrer">IBM AI Developer Professional Certificate</a> (2025)
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-graduation-cap text-warning"></i></span>
-                            <strong>IBM Software Development Fundamentals (2025)</strong>
-                            <ul class="fa-ul ml-4 mb-2">
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/04HFAPKHITNP" target="_blank" rel="noopener noreferrer">Software Development Career Guide And Interview Preparation</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/04HFAPKHITNP" target="_blank" rel="noopener noreferrer">Introduction To Software Engineering</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/GR0GG2D8MASN" target="_blank" rel="noopener noreferrer">Introduction to HTML, CSS, & JavaScript</a></li>
-                            </ul>
+                            <a href="http://coursera.org/account/accomplishments/specialization/R3PLP75ND8JQ" target="_blank" rel="noopener noreferrer">IBM Generative AI Specialization</a> (2024)
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-graduation-cap text-warning"></i></span>
-                            <strong><a href="http://coursera.org/account/accomplishments/specialization/R3PLP75ND8JQ" target="_blank" rel="noopener noreferrer">IBM Generative AI Specialization</a> (2024)</strong>
-                            <ul class="fa-ul ml-4 mb-2">
-                                <li class="small">• <a href="http://coursera.org/account/accomplishments/specialization/R3PLP75ND8JQ" target="_blank" rel="noopener noreferrer">Generative AI for Software Developers</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/MTPREU7CRAA8" target="_blank" rel="noopener noreferrer">Generative AI: Introduction and Applications</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/UD6EH6FVA6V6" target="_blank" rel="noopener noreferrer">Generative AI: Elevate Your Software Engineering Career</a></li>
-                                <li class="small">• <a href="https://www.coursera.org/account/accomplishments/verify/PWGJ4XJD56P4" target="_blank" rel="noopener noreferrer">Generative AI: Prompt Engineering Basics</a></li>
-                            </ul>
+                            IBM Software Development Fundamentals (2025)
                         </li>
                     </ul>
 
