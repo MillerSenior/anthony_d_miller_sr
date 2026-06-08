@@ -27,12 +27,65 @@
             #sideNav {
                 background-color: #0f172a !important;
             }
-            #sideNav .navbar-brand .initials-profile {
-                border-color: #0ea5e9 !important;
-                background-color: #0f172a !important;
+            body {
+                padding-top: 56px;
             }
-            #sideNav .navbar-brand .initials-profile:hover {
-                box-shadow: 0 0 15px rgba(14, 165, 233, 0.5) !important;
+            @media (min-width: 992px) {
+                #sideNav {
+                    position: fixed !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    right: 0 !important;
+                    bottom: auto !important;
+                    width: 100% !important;
+                    height: auto !important;
+                    flex-direction: row !important;
+                    padding: 0 1.5rem !important;
+                }
+                #sideNav .navbar-collapse {
+                    display: flex !important;
+                    align-items: center !important;
+                    flex-grow: 1 !important;
+                    width: auto !important;
+                    margin-bottom: 0 !important;
+                }
+                #sideNav .navbar-collapse .navbar-nav {
+                    flex-direction: row !important;
+                    width: auto !important;
+                    margin-left: auto !important;
+                }
+                #sideNav .navbar-collapse .navbar-nav .nav-item {
+                    display: inline-block !important;
+                }
+                #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+                    display: inline-block !important;
+                    padding: 0.5rem 0.75rem !important;
+                }
+            }
+            .nav-resume-actions .dropdown-menu,
+            .navbar-nav .dropdown-menu {
+                font-size: 0.9rem;
+            }
+            .navbar-nav .dropdown-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .navbar-nav .dropdown-item.disabled {
+                pointer-events: none;
+                opacity: 0.65;
+            }
+            @media print {
+                #sideNav,
+                .navbar {
+                    display: none !important;
+                }
+                .container-fluid {
+                    padding: 0 !important;
+                }
+                body {
+                    font-size: 11pt;
+                }
             }
             .resume-section .fa-certificate,
             .resume-section .fa-graduation-cap,
@@ -46,18 +99,36 @@
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Anthony Miller</span>
-                <span class="d-none d-lg-block"><img class="initials-profile rounded-circle mx-auto mb-2" src="assets/img/headshot.jpg" alt="Anthony Miller" /></span>
+            <a class="navbar-brand js-scroll-trigger fw-bold" href="#page-top" style="color:#0ea5e9; font-family:'Saira Extra Condensed',sans-serif; font-size:1.25rem; letter-spacing:0.05rem; text-transform:uppercase;">
+                Anthony Miller
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certifications</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="downloadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Download
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="downloadDropdown">
+                            <li><a class="dropdown-item" href="assets/pdf/Anthony_Miller_Resume%20%E2%80%94%20Formatted.pdf" download="Anthony_Miller_Resume.pdf"><i class="fas fa-file-pdf"></i> PDF</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); ResumeExport.downloadWord(this);"><i class="fas fa-file-word"></i> Word</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); ResumeExport.downloadTxt(this);"><i class="fas fa-file-lines"></i> Plain Text</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="printDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Print
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="printDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); ResumeExport.printFormatted(this);"><i class="fas fa-print"></i> Formatted</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); ResumeExport.printPlainText(this);"><i class="fas fa-align-left"></i> Plain Text</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -91,9 +162,9 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Senior Software Engineer</h3>
                             <div class="subheading mb-3">Roeslein & Associates</div>
-                            <p>• Own and operate multiple production web platforms end-to-end — architecture decisions, feature development, deployment, security hardening, and performance optimization — without a dedicated ops team or senior oversight.</p>
-                            <p>• Implemented production-ready WebAuthn/FIDO2 biometric authentication supporting device passkeys, Windows Hello, Face ID, and fingerprint login — including challenge storage, replay protection, and session token bridge between FIDO2 and JWT auth.</p>
-                            <p>• Reduced per-request database query count from 40+ to under 10 through bulk aggregation and cache strategy; optimized Docker build pipeline reducing deployment time from 20+ minutes to under 5.</p>
+                            <p>• Operation of multiple production web platforms end-to-end — architecture decisions, feature development, deployment, security hardening, and performance optimization.</p>
+                            <p>• Implementation and maintenance of WebAuthn/FIDO2 biometric authentication supporting device passkeys, Windows Hello, Face ID, and fingerprint login — including challenge storage, replay protection, and session token bridge between FIDO2 and JWT auth.</p>
+                            <p>• Improved database query performance through bulk aggregation and cache strategy; streamlined Docker build and deployment pipeline for fast, reliable git-to-container releases.</p>
                             <p>• Designed and implemented end-to-end test coverage (230+ Jest unit tests, Playwright E2E) with TDD methodology across a production multi-tenant application.</p>
                             <p>• Provisioned and operated production infrastructure end-to-end: Docker containerization, cloud deployment (Render, AWS RDS, Windows EC2 with PowerShell automation), environment management, and automated multi-section PDF reporting via headless Chromium.</p>
                         </div>
@@ -277,5 +348,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/resume-export.js"></script>
     </body>
 </html>
